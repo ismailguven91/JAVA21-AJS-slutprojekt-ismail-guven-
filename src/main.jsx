@@ -49,9 +49,9 @@ function App(){
     return (
         //this return renders different components depending on the stateIsLoggedIn value.
         <>
-        {stateIsLoggedIn == "ShopPage" && <ShopPage updateLogInStatus={updateLogInStatus} userName={userName} totalProducts={totalProducts} totalPriceMain={totalPriceMain} totalWatch ={totalWatch} />}
+        {stateIsLoggedIn == "ShopPage" && <ShopPage updateLogInStatus={updateLogInStatus} userName={stateName} totalProducts={totalProducts} totalPriceMain={totalPriceMain} totalWatch ={totalWatch} />}
         {stateIsLoggedIn == "HomePage" && <HomePage updateLogInStatus={updateLogInStatus} updateUserInfo={updateUserInfo}/>}
-        {stateIsLoggedIn == "Cart" && <CartPage updateLogInStatus={updateLogInStatus} userName={userName} total={total} totalPrice={totalPrice} totalWatch1 = {totalWatch1} totalWatch2 = {totalWatch2} totalWatch3 = {totalWatch3} totalWatch4 = {totalWatch4} totalWatch5 = {totalWatch5} />}
+        {stateIsLoggedIn == "Cart" && <CartPage updateLogInStatus={updateLogInStatus} userName={stateName} total={total} totalPrice={totalPrice} totalWatch1 = {totalWatch1} totalWatch2 = {totalWatch2} totalWatch3 = {totalWatch3} totalWatch4 = {totalWatch4} totalWatch5 = {totalWatch5} />}
         </>
     )
 }
