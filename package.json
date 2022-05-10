@@ -1,7 +1,7 @@
 {
-  "name": "webshopjs",
+  "name": "slutprojektwebshop",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm run dev npm run build - skapar docs-dokument",
   "scripts": {
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html --public-url ./ --dist-dir docs",
@@ -21,5 +21,8 @@
   "browserslist": [
     "Chrome>95",
     "Firefox>95"
-  ]
+  ],
+  "directories": {
+    "doc": "docs"
+  }
 }

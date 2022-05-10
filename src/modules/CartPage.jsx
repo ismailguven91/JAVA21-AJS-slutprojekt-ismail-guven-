@@ -5,7 +5,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
             return (
                 <>
                     <img src="https://www.md-watches.com/wp-content/uploads/2019/10/Rolex-79174-5.jpg" ></img>
-                    <p>Amount of watches ordered: {totalWatch1}</p>
+                    <p>amount: {totalWatch1}</p>
                 </>
             )
         }
@@ -15,7 +15,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
             return (
                 <>
                     <img src="https://www.md-watches.com/wp-content/uploads/2019/06/Rolex-69173-diamond-grey-3.jpg" ></img>
-                    <p>Amount of watches ordered: {totalWatch2}</p>
+                    <p>amount: {totalWatch2}</p>
                 </>
             )
         }
@@ -25,7 +25,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
             return (
                 <>
                     <img src="https://www.md-watches.com/wp-content/uploads/2017/12/Rolex-Oyster-Perpetual-Datejust-steel-1-.jpg" ></img>
-                    <p>Amount of watches ordered: {totalWatch3}</p>
+                    <p>amount: {totalWatch3}</p>
                 </>
             )
         }
@@ -35,7 +35,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
             return (
                 <>
                     <img src="https://www.md-watches.com/wp-content/uploads/2017/12/Rolex-Oyster-Perpetual-Datejust-diamonds-1.jpg" ></img>
-                    <p>Amount of watches ordered: {totalWatch4}</p>
+                    <p>amount: {totalWatch4}</p>
                 </>
             )
         }
@@ -45,7 +45,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
             return (
                 <>
                     <img src="https://www.md-watches.com/wp-content/uploads/2019/10/Rolex-69174-roman-5.jpg" ></img>
-                    <p>Amount of watches ordered: {totalWatch5}</p>
+                    <p>amount: {totalWatch5}</p>
                 </>
             )
         }
@@ -60,7 +60,7 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
     function purchase(event) {
         event.preventDefault();
         updateLogInStatus("HomePage");
-        alert("You purchased " + total + " products with the price of: " + totalPrice + "SEK")
+        alert("You purchased " + total + " products with the price of: " + totalPrice + " SEK")
     }
 
     return (
@@ -68,16 +68,14 @@ export default function CartPage({ userName, updateLogInStatus, total, totalPric
         <>
             <h1>Thanks for ordering {userName}</h1>
             <h1>Products: {total}</h1>
-            <h1>Total price: {totalPrice}SEK</h1>
+            <h1>Total price: {totalPrice} SEK</h1>
             {product1()}
             {product2()}
             {product3()}
             {product4()}
             {product5()}
-            <div>
             <button onClick={purchase}>Purchase</button>
             <button onClick={handleClick}>Log Out</button>
-            </div>
         </>
     )
 }

@@ -1,4 +1,6 @@
-export default function HomePage({ updateLogInStatus, updateUserInfo }) {
+import { useState } from "react";
+
+export default function HomePage({updateLogInStatus, updateUserInfo}) {
     //const status = "HomePage";
 
     const [name, setName] = useState("anonymous");
@@ -13,24 +15,13 @@ export default function HomePage({ updateLogInStatus, updateUserInfo }) {
         setName (event.target.value);
         console.log(setName);
     }
-
+    
 
     return (
         <>
-
-        <h3 id="loginentername">WELCOME</h3>
-        <h2></h2>
-            <form >
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col">
-                        <input id="logininput" type="text" placeholder="Name" onChange={handleChange}></input>
-                    </div>
-                    <div class="col">
-                        <button id="loginbutton" onClick={handleClick}>Log In</button>
-                    </div>
-                    <div class="col"></div>
-                </div>
+            <form>
+                <input type="text" placeholder="Name" onChange={handleChange}></input>
+                <button onClick={handleClick}>Log In</button>
             </form>
         </>
     )
